@@ -1,0 +1,38 @@
+{
+  "name": "gulp-base64-href-replace",
+  "version": "0.0.1",
+  "description": "Substituts GET parameters in href with base64 encoded string",
+  "main": "index.js",
+  "repository": "720dreams/gulp-base64-href-replace",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "gulpplugin",
+    "rev",
+    "revision",
+    "version",
+    "replace",
+    "asset"
+  ],
+  "author": {
+    "name": "720dreams LLC",
+    "email": "contact@720dreams.com",
+    "url": "http://720dreams.com"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "event-stream": "^3.2.2",
+    "gulp-util": "~2.2.14",
+    "through2": "~0.4.1"
+  },
+  "devDependencies": {
+    "event-stream": "^3.1.7",
+    "gulp-filter": "~0.4.0",
+    "gulp-rev": "~0.3.2",
+    "mocha": "~1.18.2"
+  }
+}
