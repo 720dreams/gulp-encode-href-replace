@@ -14,6 +14,7 @@ $ npm link
 
 ```html
 <a role="encoded" href="views.html?arg1=my text&img=images/logo.png&number=1234">Link</a>
+<a href="views.html?number=1234">Link</a>
 ```
 
 ```js
@@ -25,6 +26,13 @@ gulp.task('base64Replace', [], function () {
         .pipe(base64Replace())
         .pipe(gulp.dest('dist'));
 })
+```
+
+### Result
+
+```html
+<a role="encoded" href="views.html?encoded=YXJnMT1teSB0ZXh0JmltZz1pbWFnZXMvbG9nby5wbmcmbnVtYmVyPTEyMzQ=">Link</a>
+<a href="views.html?number=1234">Link</a>
 ```
 
 ## License
