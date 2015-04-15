@@ -56,7 +56,7 @@ function plugin(options) {
 
                     links.forEach(function (link) {
 
-                            if (link.indexOf('role="' + options.buttonRole + '"') >= 0) {
+                            if ((link.indexOf('role="' + options.buttonRole + '"') >= 0) || (link.indexOf('role=' + options.buttonRole) >= 0)) {
                                 hrefs = link.match(hrefRe);
 
                                 if (hrefs) {
@@ -71,7 +71,7 @@ function plugin(options) {
                     )
                     ;
                 }
-                
+
                 file.contents = new Buffer(contents);
                 stream.push(file);
             });
