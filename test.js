@@ -11,7 +11,7 @@ var es = require('event-stream');
 
 var revReplace = require('./index');
 
-var htmlFileBody = '<html><head><link href="http://test.css" rel="stylesheet" type="text/css"></head><body><h1>Test</h1><a target="_blank" role="encoded" id="One" href="views.html?arg1=my text&img=images/logo.png&number=1234" class="test">Link1</a><a href="views.html?unencoded=unencoded">Link3</a><h2>Text</h2><a role="encoded" href="http://domain.com/views.html?arg1=my text2&img=images/logo2.png&number=12345">Link2</a></body></html>';
+var htmlFileBody = '<html><head><link href="http://test.css" rel="stylesheet" type="text/css"></head><body><h1>Test</h1><a target="_blank" role="encoded" id="One" href="views.html?arg1=my text&img=images/logo.png&number=1234" class="test">Link1</a><a href="views.html?unencoded=unencoded">Link3</a><h2>Text</h2><a role=encoded href="http://domain.com/views.html?arg1=my text2&img=images/logo2.png&number=12345">Link2</a></body></html>';
 var encoded1 = 'encoded=YXJnMT1teSB0ZXh0MiZpbWc9aW1hZ2VzL2xvZ28yLnBuZyZudW1iZXI9MTIzNDU=';
 var encoded2 = 'encoded=YXJnMT1teSB0ZXh0JmltZz1pbWFnZXMvbG9nby5wbmcmbnVtYmVyPTEyMzQ=';
 var unencoded = 'unencoded=unencoded';
