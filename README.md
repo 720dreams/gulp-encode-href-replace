@@ -6,6 +6,8 @@ Substituts GET parameters in href with base64 encoded string
 
 ```bash
 $ npm install --save-dev gulp-base64-href-replace
+# or for local
+$ npm link
 ```
 
 ## Usage
@@ -20,10 +22,6 @@ gulp.task("index", function() {
     .pipe(base64Replace())
 });
 ```
-
-## Contributors
-
-- Marcel Eyer
 
 ## License
 
