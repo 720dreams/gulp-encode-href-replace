@@ -5,7 +5,7 @@ module.exports = plugin;
 var path = require('path');
 var gutil = require('gulp-util');
 var through = require('through2');
-var base64 = require('./base64');
+var encode = require('./encode');
 
 function plugin(options) {
     var cache = [],
@@ -33,7 +33,7 @@ function plugin(options) {
             }
 
             if (file.isStream()) {
-                this.emit('error', new gutil.PluginError('gulp-base64-href-replace', 'Streaming not supported'));
+                this.emit('error', new gutil.PluginError('gulp-encode-href-replace', 'Streaming not supported'));
                 return cb();
             }
 
@@ -62,7 +62,7 @@ function plugin(options) {
                                 if (hrefs) {
                                     hrefs.forEach(function (href) {
                                         dataClear = href.replace(replaceRe, '');
-                                        dataEncoded = options.queryParameter + base64.Base64.encode(dataClear);
+                                        dataEncoded = options.queryParameter + encode.Base64.encode(dataClear);
                                         contents = contents.replace(dataClear, dataEncoded);
                                     });
                                 }
@@ -79,7 +79,5 @@ function plugin(options) {
             cb();
 
         }
-    )
-        ;
-
+    );
 }

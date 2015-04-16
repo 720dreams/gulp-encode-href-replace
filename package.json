@@ -1,9 +1,9 @@
 {
-  "name": "gulp-base64-href-replace",
+  "name": "gulp-encode-href-replace",
   "version": "0.0.1",
-  "description": "Substituts GET parameters in href with base64 encoded string",
+  "description": "Substituts GET parameters in href with encode encoded string",
   "main": "index.js",
-  "repository": "720dreams/gulp-base64-href-replace",
+  "repository": "720dreams/gulp-encode-href-replace",
   "scripts": {
     "test": "mocha"
   },

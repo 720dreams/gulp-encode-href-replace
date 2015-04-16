@@ -1,11 +1,11 @@
-#[gulp](https://github.com/wearefractal/gulp)-base64-href-replace
+#[gulp](https://github.com/wearefractal/gulp)-encode-href-replace
 
-Substituts GET parameters in href with base64 encoded string
+Substituts GET parameters in href with encode encoded string
 
 ## Install
 
 ```bash
-$ npm install --save-dev git+https://github.com/720dreams/gulp-base64-href-replace.git
+$ npm install --save-dev git+https://github.com/720dreams/gulp-encode-href-replace.git
 # or for local
 $ npm link
 ```
@@ -19,11 +19,11 @@ $ npm link
 
 ```js
 var gulp = require('gulp');
-var base64Replace = require('gulp-base64-href-replace');
+var encodeReplace = require('gulp-encode-href-replace');
 
-gulp.task('base64Replace', [], function () {
+gulp.task('encodeReplace', [], function () {
     return gulp.src('dist/*.html')
-        .pipe(base64Replace())
+        .pipe(encodeReplace())
         .pipe(gulp.dest('dist'));
 })
 ```
